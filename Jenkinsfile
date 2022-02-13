@@ -13,7 +13,7 @@
 //DECLARATIVE WAY
 pipeline {
 	agent any
-	stages{
+	stages {
 		stage('Build'){
 			steps{
 				echo "Build"
@@ -29,7 +29,8 @@ pipeline {
 				echo "Integration Test"
 			}	
 		}				
-	} post {
+	} 
+	post {
 		always{
 			echo "I am awesome, I run always"
 		}
