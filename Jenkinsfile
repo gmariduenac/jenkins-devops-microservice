@@ -13,11 +13,15 @@
 //DECLARATIVE WAY
 pipeline {
 	//agent any
-	agent { docker{ image 'maven:3.6.3'} }
+	agent { docker{ 
+					image 'maven:3.6.3'
+					args '-u root:root'
+					}
+			 }
 	stages {
 		stage('Build'){
 			steps{
-				sh "sudo mvn --version"
+				sh "mvn --version"
 				echo "Build"
 			}	
 		}
