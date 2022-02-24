@@ -51,5 +51,8 @@ pipeline {
 		failure{
 			echo "I run when you fail"
 		}
+		changed{
+			echo "I run when you status changed from one execution to another"
+		}
 	}
 }
