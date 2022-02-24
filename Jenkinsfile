@@ -13,10 +13,10 @@
 //DECLARATIVE WAY
 pipeline {
 	agent any
-	/*agent { docker{ 
+	agent { docker{ 
 					image 'maven:3.6.3'
 					}
-			 }*/
+			 }
 	environment{
 		dockerHome = tool 'myDocker'
 		mavenHome = tool 'myMaven'
@@ -25,7 +25,7 @@ pipeline {
 	stages {
 		stage('Build'){
 			steps{
-				//sh "mvn --version"
+				sh "mvn --version"
 				sh "docker version"
 				echo "Build"
 			}	
