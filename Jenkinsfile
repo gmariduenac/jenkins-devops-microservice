@@ -59,7 +59,7 @@ pipeline {
 			steps{
 				//"docker build -t gmcplus/currency_exchange_devops:$env.BUILD_TAG"
 				script{
-					dockerImage = docker.build("docker build -t gmcplus/currency_exchange_devops:${env.BUILD_TAG}")
+					dockerImage = docker.build("gmcplus/currency_exchange_devops:${env.BUILD_TAG}")
 				}
 			}	
 		}
